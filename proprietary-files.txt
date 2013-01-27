@@ -94,4 +94,3 @@ lib/libnvwinsys.so
 lib/libnvwsi.so
 lib/libstagefrighthw.so
 lib/libtf_crypto_sst.so
-lib/libtjpg.so

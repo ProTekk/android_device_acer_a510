@@ -2,27 +2,27 @@
 $(call inherit-product, vendor/cm/config/gsm.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := A700
+PRODUCT_RELEASE_NAME := A510
 
 # Boot Animation
-TARGET_SCREEN_WIDTH := 1920
-TARGET_SCREEN_HEIGHT := 1200
+TARGET_SCREEN_WIDTH := 1280
+TARGET_SCREEN_HEIGHT := 800
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/acer/a700/full_a700.mk)
+$(call inherit-product, device/acer/a510/full_a510.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := a700
-PRODUCT_NAME := cm_a700
+PRODUCT_DEVICE := a510
+PRODUCT_NAME := cm_a510
 PRODUCT_BRAND := Acer
-PRODUCT_MODEL := A700
+PRODUCT_MODEL := A510
 PRODUCT_MANUFACTURER := Acer
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=a700_emea_cus1 \
-    TARGET_DEVICE=picasso_mf \
-    BUILD_FINGERPRINT="acer/a700_emea_cus1/picasso_mf:4.0.4/IMM76D/1337332281:user/release-keys" \
-    PRIVATE_BUILD_DESC="a700_emea_cus1-user 4.0.4 IMM76D 1337332281 release-keys"
+    PRODUCT_NAME=a510_pa_cus1 \
+    TARGET_DEVICE=picasso_m \
+    BUILD_FINGERPRINT="acer/a510_pa_cus1/picasso_m:4.1.2/JZO54K/1354108731:user/release-keys" \
+    PRIVATE_BUILD_DESC="a510_pa_cus1-user 4.1.2 JZ054K 1354108731 release-keys"
