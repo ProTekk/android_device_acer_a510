@@ -15,7 +15,8 @@ TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := picasso_m
 TARGET_OTA_ASSERT_DEVICE := picasso_m,a510_pa_cus1
 
-BOARD_KERNEL_CMDLINE := 
+BOARD_KERNEL_CMDLINE := nvmem=128M@384M mem=1024M@0M vmalloc=256M video=tegrafb tegra_fbmem=4098560@0x18012000 console=none usbcore.old_scheme_first=1 brand=acer lp0_vec=8192@0x1840c000 tegraboot=sdmmc gpt
+BOARD_KERNEL_BASE := 0x00002048
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 
@@ -26,6 +27,12 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 6291456
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 629145600
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 29905387520
 BOARD_FLASH_BLOCK_SIZE := 4096
+
+# TWRP
+DEVICE_RESOLUTION := 800x1280
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TARGET_RECOVERY_INITRC := device/acer/a510/recovery/init.rc
+TARGET_PREBUILT_KERNEL := device/acer/a510/recovery/kernel
 
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
@@ -40,8 +47,8 @@ WIFI_DRIVER_FW_PATH_STA     := "/vendor/firmware/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_PATH_AP      := "/vendor/firmware/fw_bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_P2P     := "/vendor/firmware/fw_bcmdhd_p2p.bin"
 
-TARGET_KERNEL_SOURCE := kernel/acer/t30
-TARGET_KERNEL_CONFIG := cyanogenmod_picasso_m_defconfig
+#TARGET_KERNEL_SOURCE := kernel/acer/t30
+#TARGET_KERNEL_CONFIG := cyanogenmod_picasso_m_defconfig
 
 # Avoid the generation of ldrcc instructions
 NEED_WORKAROUND_CORTEX_A9_745320 := true
